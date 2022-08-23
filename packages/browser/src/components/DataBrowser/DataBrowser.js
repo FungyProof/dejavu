@@ -12,10 +12,10 @@ import Actions from './Actions';
 import AddRowModal from './AddRowModal';
 import AddFieldModal from './AddFieldModal';
 import DataTableHeader from '../DataTable/DataTableHeader';
-import NestedColumnToggle from './NestedColumnToggle';
+// import NestedColumnToggle from './NestedColumnToggle';
 import GlobalSearch from './GlobalSearch';
 import ResultList from './ResultSet';
-import CloneApp from './CloneApp';
+// import CloneApp from './CloneApp';
 import ApplyQueryBanner from './ApplyQueryBanner';
 
 import { fetchMappings, updateReactiveList } from '../../actions';
@@ -111,7 +111,7 @@ class DataBrowser extends Component<Props> {
 						<ReactiveBase {...baseProps}>
 							<div>
 								<Actions onReload={this.handleReload} />
-								<NestedColumnToggle />
+								{/* <NestedColumnToggle /> */}
 								<GlobalSearch />
 							</div>
 							<ApplyQueryBanner />
@@ -162,7 +162,6 @@ class DataBrowser extends Component<Props> {
 						wrap="no-wrap"
 						alignItems="center"
 					>
-						{indexes.length <= 1 && hasCloneApp && <CloneApp />}
 						<AddRowModal />
 						<AddFieldModal />
 					</Flex>

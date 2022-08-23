@@ -24,7 +24,7 @@ import { CrossStorageClient } from 'cross-storage';
 import createDOMPurify from 'dompurify';
 
 import Footer from './components/Footer';
-import logo from './images/dejavu-logo.svg';
+import logo from './images/logo.svg';
 import dataImporter from './images/data-importer.png';
 import dataBrowser from './images/data-browser.png';
 import searchSandbox from './images/search-sandbox.png';
@@ -334,10 +334,10 @@ class App extends Component<null, State> {
 										)
 											? null
 											: newApp.length && (
-													<Select.Option key={newApp}>
-														{newApp}
-													</Select.Option>
-											  )}
+												<Select.Option key={newApp}>
+													{newApp}
+												</Select.Option>
+											)}
 										{pastApps.map(app => (
 											<Select.Option key={app.appname}>
 												<div

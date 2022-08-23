@@ -9,7 +9,7 @@ export default {
 	white: '#fff',
 
 	// theme-colors
-	primary: '#1890ff',
+	primary: '#000000',
 	editing: '#f0ad4e',
 	viewing: '#5cb85c',
 	background: '#eee',

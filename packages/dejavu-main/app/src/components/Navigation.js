@@ -65,11 +65,11 @@ const Navigation = ({ indexes, isConnected, history }: Props) => {
 				<Icon type="table" />
 				Data Browser
 			</Item>
-			<Item key="import">
+			{/* <Item key="import">
 				<Icon type="upload" />
 				Import Data
-			</Item>
-			{(indexes.length <= 1 || !isConnected) && (
+			</Item> */}
+			{/* {(indexes.length <= 1 || !isConnected) && (
 				<Item key="query">
 					<Icon type="search" />
 					Query Explorer
@@ -80,7 +80,7 @@ const Navigation = ({ indexes, isConnected, history }: Props) => {
 					<Icon type="experiment" />
 					Search Preview
 				</Item>
-			)}
+			)} */}
 		</Menu>
 	);
 };

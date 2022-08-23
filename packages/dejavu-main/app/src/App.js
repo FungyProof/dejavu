@@ -13,9 +13,8 @@ import {
 
 import Navigation from './components/Navigation';
 import NoMatch from './components/NoMatch';
-import OldDejavuBanner from './components/OldDejavuBanner';
 
-import logo from './images/dejavu-logo.svg';
+import logo from './images/logo.svg';
 
 const SearchPreview = lazy(() => import('./components/SearchPreview'));
 const DataBrowser = lazy(() => import('@appbaseio/dejavu-browser'));
@@ -138,7 +137,6 @@ class App extends Component {
 							</Sider>
 						)}
 						<Layout css={{ overflowX: 'hidden !important' }}>
-							<OldDejavuBanner />
 							<Content
 								css={{
 									margin: isShowingSideBar ? '15px 25px' : 0,
@@ -204,65 +202,6 @@ class App extends Component {
 								</div>
 							</Content>
 						</Layout>
-						{isShowingFooter && (
-							<Flex
-								css={{
-									position: 'fixed',
-									width: '100%',
-									bottom: 0,
-									zIndex: 1001,
-									height: 30,
-									background: colors.white,
-									padding: '5px 10px',
-								}}
-								justifyContent="space-between"
-							>
-								<iframe
-									src="https://ghbtns.com/github-btn.html?user=appbaseio&repo=dejavu&type=star&count=true"
-									scrolling="0"
-									width="120px"
-									height="20px"
-									frameBorder="0"
-									title="github-stars"
-								/>
-								<div>
-									{/* eslint-disable-next-line */}
-									<a onClick={this.showVideoModal}>
-										Watch Video
-									</a>
-									<Modal
-										visible={isShowingVideo}
-										onCancel={this.hideVideoModal}
-										width={610}
-										footer={null}
-										destroyOnClose
-									>
-										<br />
-										{isShowingVideo && (
-											<iframe
-												src="https://www.youtube.com/embed/qhDuRd2pJIY?rel=0&amp;showinfo=0"
-												allow="autoplay; encrypted-media"
-												width="560"
-												height="315"
-												frameBorder="0"
-												title="video"
-											/>
-										)}
-									</Modal>
-								</div>
-								<div>
-									Create your <b>Elasticsearch</b> in cloud
-									with{' '}
-									<a
-										href="https://appbase.io?utm_source=dejavu&utm_medium=footer&utm_campaign=appbaseio"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										appbase.io
-									</a>
-								</div>
-							</Flex>
-						)}
 					</Layout>
 				</BrowserRouter>
 			</Provider>
