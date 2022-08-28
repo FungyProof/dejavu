@@ -19,6 +19,7 @@ import logo from './images/logo.svg';
 const SearchPreview = lazy(() => import('./components/SearchPreview'));
 const DataBrowser = lazy(() => import('@appbaseio/dejavu-browser'));
 const QueryExplorer = lazy(() => import('./components/QueryExplorer'));
+const UpdateRating = lazy(() => import('./components/UpdateRating'));
 
 const { getUrlParams, getLocalStorageItem, setLocalStorageData } = utils;
 const { LOCAL_CONNECTIONS } = constants;
@@ -95,6 +96,10 @@ class App extends Component {
 				return withSuspense(SearchPreview);
 			}
 
+			if (route === 'update-rating') {
+				return withSuspense(UpdateRating);
+			}
+
 			if (route === 'query') {
 				return withSuspense(QueryExplorer);
 			}
@@ -155,6 +160,13 @@ class App extends Component {
 											path="/"
 											render={props =>
 												withSuspense(DataBrowser, props)
+											}
+										/>
+										<Route
+											exact
+											path="/update-rating"
+											render={props =>
+												withSuspense(UpdateRating, props)
 											}
 										/>
 										<Route
