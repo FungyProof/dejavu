@@ -31,7 +31,7 @@ const UpdateRating = ({ isConnected, appName, rawUrl }) => {
 
 		try {
 			const res = await fetch(
-				'http://localhost:3000/v0/jobs/update-rating',
+				'https://api.staging-fungyproof.com/v0/jobs/update-rating',
 				{
 					headers: {
 						'X-Api-Key': apiKey,
