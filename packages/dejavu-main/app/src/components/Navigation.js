@@ -43,6 +43,10 @@ const Navigation = ({ indexes, isConnected, history }: Props) => {
 				setSelectedKey('rate');
 				history.push('/update-rating');
 				break;
+			case 'index':
+				setSelectedKey('index');
+				history.push('/index-collection');
+				break;
 			default:
 				setSelectedKey(key);
 				history.push(key);
@@ -68,6 +72,10 @@ const Navigation = ({ indexes, isConnected, history }: Props) => {
 			<Item key="browse">
 				<Icon type="table" />
 				Data Browser
+			</Item>
+			<Item key="index">
+				<Icon type="login" />
+				Index Collection
 			</Item>
 			<Item key="rate">
 				<Icon type="font-colors" />

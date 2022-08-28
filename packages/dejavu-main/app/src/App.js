@@ -20,6 +20,7 @@ const SearchPreview = lazy(() => import('./components/SearchPreview'));
 const DataBrowser = lazy(() => import('@appbaseio/dejavu-browser'));
 const QueryExplorer = lazy(() => import('./components/QueryExplorer'));
 const UpdateRating = lazy(() => import('./components/UpdateRating'));
+const IndexCollection = lazy(() => import('./components/IndexCollection'));
 
 const { getUrlParams, getLocalStorageItem, setLocalStorageData } = utils;
 const { LOCAL_CONNECTIONS } = constants;
@@ -100,6 +101,10 @@ class App extends Component {
 				return withSuspense(UpdateRating);
 			}
 
+			if (route === 'index-collection') {
+				return withSuspense(IndexCollection);
+			}
+
 			if (route === 'query') {
 				return withSuspense(QueryExplorer);
 			}
@@ -160,6 +165,13 @@ class App extends Component {
 											path="/"
 											render={props =>
 												withSuspense(DataBrowser, props)
+											}
+										/>
+										<Route
+											exact
+											path="/index-collection"
+											render={props =>
+												withSuspense(IndexCollection, props)
 											}
 										/>
 										<Route

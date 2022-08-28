@@ -678,14 +678,14 @@ class ConnectApp extends Component<Props, State> {
 											<code>/</code> after the cluster
 											address.
 										</li>
-										<li>
+										{/* <li>
 											Your cluster needs to have CORS
 											enabled for the origin where Dejavu
 											is running. See below for more on
 											that.
-										</li>
+										</li> */}
 									</ul>
-									<h3>CORS Settings</h3>
+									{/* <h3>CORS Settings</h3>
 									<p>
 										To make sure you have enabled CORS
 										settings for your Elasticsearch
@@ -747,7 +747,7 @@ http.cors.allow-credentials: true`}
 											-e http.cors.allow-credentials=true
 											opensearchproject/opensearch:1.2.4
 										</code>
-									</div>
+									</div>*/}
 								</div>
 							</React.Fragment>
 						}

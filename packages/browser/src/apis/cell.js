@@ -17,8 +17,6 @@ const setCellValue = async (app, type, rawUrl, id, property, value) => {
 		const doc = unflatten({ [property]: value });
 		const formattedId = encodeURIComponent(id);
 
-		console.log('test!!!');
-
 		// TODO < ES version 7 `${url}/${app}/${type}/${formattedId}/_update`,
 		const res = await fetch(`${url}/${app}/_update/${formattedId}`, {
 			headers: {
