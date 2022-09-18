@@ -28,7 +28,7 @@ const IndexCollection = ({ isConnected, appName, rawUrl }) => {
 	const checkStatus = async () => {
 		try {
 			const res = await fetch(
-				`http://localhost:3000/v0/jobs/index-contract/${contractId}/status`,
+				`https://api.skry.xyz/v0/jobs/index-contract/${contractId}/status`,
 				{
 					headers: {
 						'X-Api-Key': apiKey,
@@ -58,7 +58,7 @@ const IndexCollection = ({ isConnected, appName, rawUrl }) => {
 
 		try {
 			await fetch(
-				`http://localhost:3000/v0/jobs/index-contract/${contractId}`,
+				`https://api.skry.xyz/v0/jobs/index-contract/${contractId}`,
 				{
 					headers: {
 						'X-Api-Key': apiKey,
@@ -70,7 +70,7 @@ const IndexCollection = ({ isConnected, appName, rawUrl }) => {
 
 		try {
 			const res = await fetch(
-				'http://localhost:3000/v0/jobs/index-contract',
+				'https://api.skry.xyz/v0/jobs/index-contract',
 				{
 					headers: {
 						'X-Api-Key': apiKey,
